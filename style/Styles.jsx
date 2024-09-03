@@ -44,7 +44,12 @@ export const styles = StyleSheet.create({
       backgroundColor: 'green', 
       paddingHorizontal:40, 
       paddingVertical: 10, 
-      borderRadius: 15,
+      borderRadius: 10,
+      marginTop: 5
+    },
+    notConnected: {
+      width: 100,
+      height: 100
     }
   });
   

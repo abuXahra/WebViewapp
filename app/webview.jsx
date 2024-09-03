@@ -1,12 +1,13 @@
 // app/WebViewScreen.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator, Linking, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ActivityIndicator, Linking, Alert, Image } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useRouter } from 'expo-router';
 import Loader from '../components/Loader';
 import NetInfo from '@react-native-community/netinfo';
 import { styles } from '../style/Styles';
+import notConnected from '../assets/images/not_connected.png'
 
 
 const WebViewScreen = () => {
@@ -16,7 +17,7 @@ const WebViewScreen = () => {
   const router = useRouter();
 // Initiate phone call
   const makeCall = () => {
-    const phoneNumber = 'tel:+2348135701458'; // Replace with your phone number
+    const phoneNumber = 'tel:+2349030953289'; // Replace with your phone number
     Linking.canOpenURL(phoneNumber)
       .then((supported) => {
         if (supported) {
@@ -32,8 +33,8 @@ const WebViewScreen = () => {
 
 // Initiate whatsapp chat
   const initiateWhatsAppChat = () => {
-    const phoneNumber = '08135701458'; // Replace with the recipient's phone number
-    const text = encodeURIComponent('Hello!');
+    const phoneNumber = '09030953289'; // Replace with the recipient's phone number
+    const text = encodeURIComponent('Hello Mishal customer care!');
     // Construct the WhatsApp URL
     const url = `whatsapp://send?phone=${phoneNumber}&text=${text}`;
     Linking.openURL(url);
@@ -161,6 +162,11 @@ const WebViewScreen = () => {
   if (!isConnected) {
     return (
       <View style={styles.containerb}>
+        <Image
+          source={notConnected}
+          resizeMode='contain'
+          style={styles.notConnected}
+          />
         <Text>No internet connection</Text>
         <Text>Please check your connection and refresh the page.</Text>
         <TouchableOpacity onPress={handleRefresh}>
