@@ -10,6 +10,7 @@ import { styles } from '../style/Styles';
 import notConnected from '../assets/images/not_connected.png'
 
 
+
 const WebViewScreen = () => {
   // const [isConnected, setIsConnected] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -183,24 +184,24 @@ const WebViewScreen = () => {
       {/* AppBar */}
       <View style={styles.appBar}>
       {/* status Bar Icons */}
-          <Text className='text-white font-bold text-lg'>Mishal App</Text>
+          <Text className='text-white font-bold text-2xl'>Mishal App</Text>
 
       {/* status Bar Icons */}
         <View style={styles.iconContainer}>
           <TouchableOpacity onPress={() => handleIconPress('arrow-left')}>
-            <Icon name="arrow-left" size={20} style={styles.icon} />
+            <Icon name="arrow-left" size={30} style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => handleIconPress('arrow-right')}>
-            <Icon name="arrow-right" size={20}  style={styles.icon} />
+            <Icon name="arrow-right" size={30}  style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => handleIconPress('refresh')}>
-            <Icon name="refresh" size={20}  style={styles.icon} />
+            <Icon name="refresh" size={30}  style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => handleIconPress('phone')}>
-            <Icon name="phone" size={20} style={styles.icon} />
+            <Icon name="phone" size={30} style={styles.icon} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => handleIconPress('whatsapp')}>
-            <Icon name="whatsapp" size={20} style={styles.icon} />
+            <Icon name="whatsapp" size={30} style={styles.icon} />
           </TouchableOpacity>
         </View>
       </View>

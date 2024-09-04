@@ -12,7 +12,10 @@ export const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: 10,
+      padding: 5,
+      paddingHorizontal: 10.0,
+      paddingVertical: 15.0,
+      gap: 10.0,
       backgroundColor: '#006600',
       borderBottomColor: '#006600',
     },
@@ -24,7 +27,7 @@ export const styles = StyleSheet.create({
     iconContainer: {
       flexDirection: 'row',
       alignItems: 'center',
-      gap: 20.0
+      gap: 15.0
     },
     icon: {
       marginHorizontal: 5,
